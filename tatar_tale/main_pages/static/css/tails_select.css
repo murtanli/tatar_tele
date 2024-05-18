@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    background-image: url("../images/background_img.png");
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>div.tails_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #ffffff;
+    margin: 1vw 25vw;
+    border-radius: 25px;
+}
+
+main>div.tails_container>div.tale_1 {
+    border: 0.3vw solid #F4E04D;
+    border-radius: 25px;
+    margin: 1vh auto;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+main>div.tails_container>div.tale_2 {
+    border: 0.3vw solid #0567E7;
+    border-radius: 25px;
+    margin: 1vh auto;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 10vh;
+}
+main>div.tails_container>div.tale_3 {
+    border: 0.3vw solid #87A922;
+    border-radius: 25px;
+    margin: 1vh auto;
+    margin-bottom: 5vh;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+main>div.tails_container>div.tale_1>div.img_stats, 
+main>div.tails_container>div.tale_2>div.img_stats, 
+main>div.tails_container>div.tale_3>div.img_stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+}
+
+main>div.tails_container>div.tale_1>div.img_stats>img, 
+main>div.tails_container>div.tale_2>div.img_stats>img, 
+main>div.tails_container>div.tale_3>div.img_stats>img {
+    margin: 1vh 1vw;
+}
+
+main>div.tails_container>div.tale_1>div.img_stats>div.t_stats, 
+main>div.tails_container>div.tale_2>div.img_stats>div.t_stats, 
+main>div.tails_container>div.tale_3>div.img_stats>div.t_stats {
+    display: grid;
+    margin: 0 1vw;
+    grid-template-rows: 4vh 3vh;
+    grid-template-columns: repeat(2, 16vw);
+}
+main>div.tails_container>div.tale_1>div.img_stats>div.t_stats>h1, 
+main>div.tails_container>div.tale_2>div.img_stats>div.t_stats>h1, 
+main>div.tails_container>div.tale_3>div.img_stats>div.t_stats>h1 {
+    width: auto;
+    height: auto;
+    font-size: 1.6vw;
+    margin: 0;
+    font-weight: 900;
+    grid-row: 1;
+    grid-column: 1;
+}
+main>div.tails_container>div.tale_1>div.img_stats>div.t_stats>a, 
+main>div.tails_container>div.tale_2>div.img_stats>div.t_stats>a, 
+main>div.tails_container>div.tale_3>div.img_stats>div.t_stats>a {
+    width: auto;
+    height: auto;
+    text-align: end;
+    color: #000000;
+    margin: 0;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+main>div.tails_container>div.tale_1>div.img_stats>div.t_stats>div.t_progress_bar, 
+main>div.tails_container>div.tale_2>div.img_stats>div.t_stats>div.t_progress_bar, 
+main>div.tails_container>div.tale_3>div.img_stats>div.t_stats>div.t_progress_bar {
+    grid-row: 2;
+    grid-column: span 2;
+    margin: 0.6vh;
+    border-radius: 20px;
+}
+main>div.tails_container>div.tale_1>div.img_stats>div.t_stats>div.t_progress_bar {
+    border: 2px solid #F4E04D;
+    background: linear-gradient(to right, #F4E04D 0%, #F4E04D 70%, #ffffff 0%, #ffffff 100%);
+}
+main>div.tails_container>div.tale_2>div.img_stats>div.t_stats>div.t_progress_bar {
+    border: 2px solid #0567E7;
+    background: linear-gradient(to right, #0567E7 0%, #0567E7 20%, #ffffff 0%, #ffffff 100%);
+}
+main>div.tails_container>div.tale_3>div.img_stats>div.t_stats>div.t_progress_bar {
+    border: 2px solid #87A922;
+    background: linear-gradient(to right, #87A922 0%, #87A922 100%, #ffffff 0%, #ffffff 100%);
+}
+
+main>div.tails_container>div.tale_1>p, 
+main>div.tails_container>div.tale_2>p, 
+main>div.tails_container>div.tale_3>p {
+    font-size: 0.9vw;
+    margin: 1vh;
+    display: none;
+}

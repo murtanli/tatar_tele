@@ -1,0 +1,135 @@
+header {
+    background-color: #ffffff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 5vh;
+    overflow: visible;
+    margin-bottom: 10vh;
+}
+
+
+header>div.btn_container_left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 2;
+}
+header>div.btn_container_left>a {
+    margin-right: 5vw;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1vw;
+    font-weight: 700;
+}
+header>div.btn_container_left>a:hover {
+    border-bottom: 2px solid #000000;
+}
+
+header>div.btn_container_right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+}
+header>div.btn_container_right>a {
+    margin-left: 4.5vw;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1vw;
+    font-weight: 700;
+}
+header>div.btn_container_right>a:hover {
+    border-bottom: 2px solid #000000;
+}
+
+
+header>div.central_accaunt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 10vh;
+    margin-top: 5vh;
+}
+header>div.central_accaunt>div.account_progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2vw;
+    height: 3.2vw;
+    background: transparent;
+    border-radius: 100px;
+    border: 0.7vh solid #A4CD2D;
+    overflow: hidden;
+}
+header>div.central_accaunt>div.account_progress>a {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+header>div.central_accaunt::before {
+    content: '';
+    position: static;
+    top: 5vh;
+    left: 43.8vw;
+    width: 3vw;
+    height: 2vw;
+    background: transparent;
+    border-top-right-radius: 80px;
+    box-shadow: 2vh -0.7vh 0 0 #353333;
+}
+header>div.central_accaunt::after {
+    content: '';
+    position: static;
+    top: 5vh;
+    right: 3vw;
+    width: 3vw;
+    height: 2vw;
+    background: transparent;
+    border-top-left-radius: 80px;
+    box-shadow: -2vh -0.7vh 0 0 #555353;
+}
+
+*/
+.header_profile_image{
+    height: 7vh;
+    width: 7vh;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.input_avatar {
+    position: relative;
+    display: inline-block;
+    transition: 0.4s ease;
+}
+
+.profile_image {
+    display: block;
+}
+
+.change_photo_text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: 7vh;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.4s ease;
+}
+
+.input_avatar:hover .change_photo_text {
+    display: block;
+}

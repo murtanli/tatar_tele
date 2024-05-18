@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="btn_container_left">
+            <a href="#">О нас</a>
+            <a href="{% url 'tails_select' %}">Сказки</a>
+        </div>
+        <div class="central_accaunt">
+            <div class="account_progress">
+                <a href="{% url 'profile' %}"><img class="header_profile_image" src="{% url 'get_image' user.id %}" alt="profile_img"></a>
+            </div>
+        </div>
+        <div class="btn_container_right">
+            <a href="#">Обучение</a>
+            <a href="#">Контакты</a>
+        </div>
+    </header>
+    <main>
+
+    {% block content %}
+
+    {% endblock %}
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

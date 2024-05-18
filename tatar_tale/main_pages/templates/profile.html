@@ -1,0 +1,139 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+        <title>{{ title }}</title>
+    </head>
+
+    <div class="profile_block">
+        <div class="profile_info">
+            <label class="input_avatar">
+                <input type="file" name="avatar" id="avatar" accept="image/x-png,image/gif,image/jpeg">
+                <span>
+                    <img class="profile_image" src="{% url 'get_image' user.id %}" alt="">
+                    <span class="change_photo_text">Изменить фото</span>
+                </span>
+            </label>
+            <div class="p_i_text">
+                <h2>
+                    <span id="username">{{ user.username }}</span>
+                    <svg id="edit-username" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer;">
+                        <path d="M19.5 11.5L12.5 4.5L15.5 1.5L22.5 8.5L19.5 11.5Z" stroke="#B5B5B5" stroke-width="2"/>
+                        <path d="M19.5 11.5L9 22H2V15L12.5 4.5L19.5 11.5Z" stroke="#B5B5B5" stroke-width="2"/>
+                    </svg>
+                </h2>
+                <p>{{ profile.email }}
+                </p>
+            </div>
+            
+            <!-- Hidden form for editing username -->
+            <div class="change_username_form" id="edit-username-form" style="display:none; margin-top: -4.5vh; ;
+            margin-left: -12vh;">
+                <input type="text" id="new-username" placeholder="Введите имя">
+                <button id="save-username">Сохранить</button>
+            </div>
+        </div>
+        <div class="tale_info">
+            <img class="tale_info_img" src="{% static 'images/tale_info_img.png' %}" alt="">
+            <div class="shadow">
+                <h2>{{ last_tale_name }}</h2>
+                <a href="#">Продолжить ></a>
+                <div class="progress_bar" ></div>
+            </div>
+        </div>
+
+        <div class="study_info">
+            <div class="stats">
+                <div class="lessons">
+                    <p>Пройдено уроков</p> <h2>{{ all_completed_lessons }}</h2>
+                </div>
+                <div class="words">
+                    <p>Выучено слов</p> <h2>{{ learned_words }}</h2>
+                </div>
+                <div class="tales">
+                    <p>Пройдено сказок</p> <h2>{{ completed_tales }}</h2>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#">Учебный материал</a>
+                <a href="#">Словарь</a>
+                <a href="#">Поменять пароль</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#avatar').change(function() {
+                var formData = new FormData();
+                formData.append('avatar', this.files[0]);
+    
+                $.ajax({
+                    url: '{% url "upload_avatar" %}',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            location.reload();
+                        } else {
+                            alert(response.error);
+                        }
+                    },
+                    error: function(response) {
+                        alert('An error occurred while uploading the file.');
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function() {
+            // Получаем значение прогресса из контекста шаблона Django
+            var progressValue = {{ progress_value }};
+
+            // Расчет ширины шкалы прогресса
+            var progressWidth = progressValue + "%";
+
+            // Устанавливаем ширину шкалы прогресса с помощью CSS
+            $(".progress_bar").css('background', `linear-gradient(to right, #F4E04D 0%, #F4E04D ${progressWidth}, #ffffff ${progressWidth}, #ffffff 100%)`);       
+        });
+        $(document).ready(function() {
+            // Handle click on the SVG to show the edit form
+            $('#edit-username').on('click', function() {
+                var currentUsername = $('#username').text();
+                $('#new-username').val(currentUsername);
+                $('#edit-username-form').show();
+            });
+        
+            // Handle save button click
+            $('#save-username').on('click', function() {
+                var newUsername = $('#new-username').val();
+                if (newUsername) {
+                    $.ajax({
+                        url: '/update-username/',  // Replace with your actual URL endpoint
+                        type: 'POST',
+                        data: {
+                            'username': newUsername,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'  // Ensure CSRF token is included
+                        },
+                        success: function(response) {
+                            $('#username').text(newUsername);
+                            $('#edit-username-form').hide();
+                        },
+                        error: function(xhr, status, error) {
+                            alert('Error updating username');
+                        }
+                    });
+                } else {
+                    alert('Username cannot be empty');
+                }
+            });
+        });
+        </script>
+{% endblock %}

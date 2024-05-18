@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    background-image: url("../images/background_img.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+div.profile_block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #ffffff;
+    flex-grow: 1;
+    margin: 0 27vw;
+    border-radius: 3vh;
+}
+
+div.profile_block>div.profile_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 3vw;
+}
+
+.profile_block>div.profile_info>label>input[type=file] {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.profile_block>div.profile_info>label.input_avatar>span {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 1vw;
+    width: 3.6vw;
+    height: 3.6vw;
+    background-color: #D9D9D9;
+
+    border: 0.5vw solid #A4CD2D;
+    margin: 1vw;
+}
+.profile_block>div.profile_info>label.input_avatar>span:hover {
+    filter: contrast(120%);
+}
+
+.profile_block>div.profile_info>div.p_i_text {
+
+}
+.profile_block>div.profile_info>div.p_i_text>h2 {
+    font-size: 1.2vw;
+}
+.profile_block>div.profile_info>div.p_i_text>h2>svg {
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+}
+.profile_block>div.profile_info>div.p_i_text>h2>svg:hover {
+    fill: #74911f;
+}
+.profile_block>div.profile_info>div.p_i_text>p {
+    font-size: 0.9vw;
+}
+.profile_block>div.profile_info>div.p_i_text>p>svg {
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+}
+.profile_block>div.profile_info>div.p_i_text>p>svg:hover {
+    fill: #74911f;
+}
+
+
+.tale_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5vw;
+    width: 90%;
+    margin: 3vh auto;
+    margin-top: 0vh;
+    /* background-image: url("../images/tale_info_img.png"); */
+    border-radius: 3vh;
+    overflow: hidden;
+}
+.tale_info_img{
+    position: absolute;
+    width: 41.2%;
+    height: 7.5vw;
+    /* overflow: hidden; */
+    border-radius: 3vh;
+}
+.tale_info>div.shadow {
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-template-columns: repeat(2, 50%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, #000000d0, transparent);
+}
+
+.tale_info>div.shadow>h2 {
+    grid-row: 1;
+    grid-column: 1;
+    color: #ffffff;
+    font-size: 1.4vw;
+    margin: 2vw 2vw;
+}
+.tale_info>div.shadow>a {
+    grid-row: 1;
+    grid-column: 2;
+    color: #ffffff;
+    font-size: 0.9vw;
+    text-align: end;
+    width: 90%;
+    margin: 2.5vw 0;
+    margin-right: 1vw;
+}
+.tale_info>div.shadow>div.progress_bar {
+    grid-row: 2;
+    grid-column: span 2;
+    margin: 1.1vw;
+    border-radius: 20px;
+    background: linear-gradient(to right, #F4E04D 0%, #F4E04D 70%, #ffffff 0%, #ffffff 100%);
+}
+
+.study_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.study_info>div.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 1vw 3vw;
+}
+.study_info>div.stats>div.words,
+.study_info>div.stats>div.lessons,
+.study_info>div.stats>div.tales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    width: 20vw;
+    height: 3.5vw;
+    border-radius: 3vh;
+    margin-bottom: 1vw;
+}
+.study_info>div.stats>div.lessons {
+    border: 0.2vw solid #F4E04D;
+}
+.study_info>div.stats>div.words {
+    border: 0.2vw solid #87A922;
+}
+.study_info>div.stats>div.tales {
+    border: 0.2vw solid #0567E7;
+}
+
+.study_info>div.stats>div.lessons>p,
+.study_info>div.stats>div.words>p,
+.study_info>div.stats>div.tales>p {
+    margin-left: 1vw;
+    font-size: 0.9vw;
+    font-weight: 700;
+}
+.study_info>div.stats>div.lessons>h2,
+.study_info>div.stats>div.words>h2,
+.study_info>div.stats>div.tales>h2 {
+    margin-right: 1vw;
+    font-size: 1.1vw;
+    font-weight: 900;
+}
+.study_info>div.stats>div.lessons>h2 {
+    color: #F4E04D;
+}
+.study_info>div.stats>div.words>h2 {
+    color: #87A922;
+}
+.study_info>div.stats>div.tales>h2 {
+    color: #0567E7;
+}
+
+.study_info>div.menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 2vw;
+    border-left: 0.1vw solid #000000;
+    margin-top: 1vw;
+}
+.study_info>div.menu>a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9vw;
+    font-weight: 600;
+    margin-bottom: 0.7vw;
+    margin-left: 0.6vw;
+}
+
+.profile_image{
+    height: 12vh;
+    width: 12vh;
+    border-radius: 100%;
+    object-fit: cover;
+    
+}
+
+.change_username_form{
+    transition: 0.5s ease-out;
+}
+.change_username_form input{
+    border: solid 0.1vh black;
+    border-radius: 2vh;
+    height: 3vh;
+    margin-top: 0.4vh;
+    transition: 0.5s ease-out;
+}
+.change_username_form input{
+    font-family: Inter;
+    font-size: 1.2vw;
+}
+.change_username_form input:focus{
+    outline: none;
+    border: solid 0.1vh rgb(83, 56, 56);
+}
+.change_username_form button{
+    border: 0.1vh black;
+    width: 12vh;
+    height: 5vh;
+    transition: 0.5s ease-out;
+    background-color: #618200;
+    border-radius: 2vh;
+    font-family: Inter;
+}
+.change_username_form button:hover{
+    background-color: #74911f;
+}

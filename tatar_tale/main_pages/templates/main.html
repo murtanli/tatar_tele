@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="btn_container_left">
+            <a href="#">О нас</a>
+            <a href="#">Сказки</a>
+        </div>
+        
+        <div class="btn_container_right">
+            <a href="{% url ''}">Обучение</a>
+            <a href="#">Контакты</a>
+        </div>
+    </header>
+    <main>
+        <div class="block_title">
+            <h1 class="title">Погрузитесь в мир сказок</h1>
+            <h2 class="sub_title">Вместе с изучением татарского языка</h2>
+        </div>
+        <div class="content_b_1">
+            <h1 class="title">Вперед к приключениям!</h1>
+            <div class="conten_adv">
+                <p>Готов открыть для себя культуру Татарстана? 
+                    Войди в аккаунт или создай новый и 
+                    погрузись в потрясающую грамматику татарского языка!</p>
+                <button>Начать</button>
+            </div>
+        </div>
+        <div class="content_b_2">
+            <img src="../pictures/main/content_top_cloud.png" alt="clouds" class="clouds">
+            <h1 class="title">Цель проекта</h1>
+            <div class="content_blocks">
+                <div class="tales text_content">
+                    <h1>Знакомим с народными сказками</h1>
+                    <p>Сказки помогут не только насладиться красотой языка и 
+                        литературы, но и стать ближе к культуре и истории 
+                        татарского народа, что способствует глубокому 
+                        пониманию и уважению разнообразия мировых культур.</p>
+                </div>
+                <div class="gramar text_content">
+                    <h1>Помогаем изучать язык и его грамматику</h1>
+                    <p>Изучение народных татарских сказок поможет в освоении 
+                        языка и грамматики татарского языка. Чтение сказок 
+                        позволит познакомиться с особенностями лексики, 
+                        фразеологии, грамматическими конструкциями и правилами языка. 
+                        Благодаря изучению текстов сказок можно улучшить 
+                        свой словарный запас, научиться правильно строить предложения, 
+                        понимать контекст и смысл высказываний на татарском языке. </p>
+                </div>
+                <div class="stud text_content">
+                    <h1>Легкое обучение в игровой форме</h1>
+                    <p>Благодаря игровой форме изучения ты сможешь 
+                        легко запоминать информацию, повышать мотивацию 
+                        к обучению и получать удовольствие от процесса. 
+                        Играя вместе с сказками, ты сможешь стать 
+                        настоящим мастером татарского языка!</p>
+                </div>
+            </div>
+        </div>
+        <div class="tales_info">
+            <div class="tales_info_container">
+                <h1 class="title">Множество сказок</h1>
+                <img src="../pictures/main/tales_info.png" alt="tales" class="tales">
+            </div>
+        </div>
+        <div class="reg_block">
+            <h1 class="title">Присоединяйся</h1>
+            <p>Хотите улучшить свои знания языка и погрузиться в 
+                удивительный мир татарских сказок? Тогда присоединяйтесь 
+                к нам на нашем сайте по изучению языка вместе с татарскими сказками! 
+                Здесь вы найдете увлекательные уроки, интересные задания и 
+                возможность погрузиться в культуру и традиции татарского народа. 
+                Регистрируйтесь прямо сейчас и начинайте свое языковое путешествие вместе с нами!</p>
+            <button>Регистрация</button>
+        </div>
+        <img src="../pictures/main/vectors_dotted.png" alt="vector_dotted" class="vector_dotted">
+    </main>
+    <footer>
+        <p>© 2020 - 2023, TatReek  10+</p>
+        <div class="buttons_container">
+            <div class="buttons">
+                <a href="#">Главная</a>
+                <a href="#">Сказки</a>
+                <a href="#">Уровни</a>
+            </div>
+            <div class="buttons">
+                <a href="#">Главная</a>
+                <a href="#">Сказки</a>
+                <a href="#">Уровни</a>
+            </div>
+            <div class="buttons">
+                <a href="#">Главная</a>
+                <a href="#">Сказки</a>
+                <a href="#">Уровни</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
