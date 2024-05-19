@@ -10,7 +10,7 @@ class AllInfoTalesAdmin(admin.ModelAdmin):
 
 
 class TalesInfoAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'all_info_tales', 'percent_progress')
+    list_display = ('pk', 'all_info_tales', 'percent_progress', 'user')
     list_filter = ('all_info_tales',)
 
 

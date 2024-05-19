@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #2E2E2E;
+    width: 100vw;
+}
+footer>p {
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+div.buttons_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-left: 0.1vw solid #ffffff;
+    margin: 1vw 0;
+    margin-left: 15vw;
+}
+.buttons>a {
+    color: #ffffff;
+    font-size: 1.1vw;
+    margin: 0.5vw 0.9vw;
+    text-decoration: none;
+}

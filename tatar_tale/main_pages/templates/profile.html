@@ -8,10 +8,11 @@
 
     <div class="profile_block">
         <div class="profile_info">
+            <a class="logout_link" href="{% url 'logout' %}">Выйти с аккаунта</a>
             <label class="input_avatar">
                 <input type="file" name="avatar" id="avatar" accept="image/x-png,image/gif,image/jpeg">
                 <span>
-                    <img class="profile_image" src="{% url 'get_image' user.id %}" alt="">
+                    <img class="profile_image" src="{% url 'get_image' profile.id %}" alt="Фото нет">
                     <span class="change_photo_text">Изменить фото</span>
                 </span>
             </label>
@@ -35,7 +36,7 @@
             </div>
         </div>
         <div class="tale_info">
-            <img class="tale_info_img" src="{% static 'images/tale_info_img.png' %}" alt="">
+            <img class="tale_info_img" src="{% static 'images/tale_info_img.png' %}" alt="" >
             <div class="shadow">
                 <h2>{{ last_tale_name }}</h2>
                 <a href="#">Продолжить ></a>

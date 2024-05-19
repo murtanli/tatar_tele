@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: url('../images/background_img.png ');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Jost", sans-serif;
+    overflow-x: hidden;
+}
+
+.reg_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 5vw 37vw;
+    border-radius: 2vw;
+}
+h1.title {
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+p.t_trans {
+    font-size: 1vw;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
+
+input {
+    margin: 1vw 2vw;
+    background-color: #e9e6e6;
+    border: none;
+    border-bottom: 0.1vw solid #000000;
+    padding: 0.7vw 1vw;
+    padding-right: 5vw;
+    
+}
+input:focus {
+    outline: none;
+    border-bottom: 0.2vw dashed #87A922;
+}
+input:hover {
+    background-color: #f0eeee;
+}
+
+button {
+    background-color: #87A922;
+    font-size: 1vw;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    margin: 2vw auto;
+    padding: 0.7vw 1.6vw;
+}
+button:hover {
+    background-color: #7b9a1f;
+}
+
+a {
+    color: #B5B5B5;
+    font-size: 1vw;
+    text-decoration: none;
+    margin-bottom: 1vh;
+}
+
+a>span {
+    font-weight: 700;
+}
+a:hover {
+    color: #929292;
+}
+
+
+.message_block_none{
+    display: none;
+}
+.message_block{
+    position: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.close_message button{
+    font-family: "Jost", sans-serif;
+    font-size: 1.2vw;
+    width: 25vh;
+    height: 6vh;
+    color: white;
+    border: none;
+    background-color: rgb(249, 37, 63);
+    transition:  0.4s ease;
+    border-radius: 2vh;
+}
+.close_message button:hover{
+    background-color: rgb(182, 6, 27);
+}
+.close_message {
+    margin-bottom: 10vh;
+}
+.message{
+    display: flex;
+    width: 50vh;
+    background-color: white;
+    border-radius: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 0.1vh black;
+}
+.messages{
+    padding: 5vh;
+}
+.messages li{
+    font-family: "Jost", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: red;
+}

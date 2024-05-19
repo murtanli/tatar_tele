@@ -10,14 +10,16 @@ body{
     font-family: "Jost", sans-serif;
     overflow-x: hidden;
 }
-
+header {
+    margin-bottom: 0;
+}
 div.block_title {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 40vw;
-    background-image: url('../pictures/main/block_title_back.png');
+    background-image: url('../images/block_title_back.png');
     background-size: 100% 100%;
 }
 .block_title>h1.title {
@@ -59,7 +61,7 @@ div.block_title {
     font-size: 1.3vw;
     z-index: 2;
 }
-.conten_adv>button {
+.conten_adv>a {
     border: none;
     background-color: #F4E04D;
     border-radius: 3vw;
@@ -69,7 +71,7 @@ div.block_title {
     margin-top: 1vw;
     z-index: 2;
 }
-.conten_adv>button:hover {
+.conten_adv>a:hover {
     background-color: #ecd735;
 }
 
@@ -80,7 +82,7 @@ div.block_title {
     flex-direction: column;
 }
 .content_b_2>h1.title {
-    font-size: 2vw;
+    font-size: 2.4vw;
     z-index: 2;
 }
 .content_blocks {
@@ -178,7 +180,7 @@ img.tales {
     margin: auto 3vw;
     z-index: 2;
 }
-.reg_block>button {
+.reg_block>a {
     border: none;
     background-color: #0567E7;
     font-size: 1.3vw;
@@ -187,6 +189,7 @@ img.tales {
     padding: 0.7vw 3vw;
     border-radius: 2.3vw;
     margin: 3vw auto;
+    z-index: 2;
 }
 
 img.vector_dotted {

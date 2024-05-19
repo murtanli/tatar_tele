@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: url('../images/background_img.png ');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Jost", sans-serif;
+    overflow-x: hidden;
+}
+
+.auth_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 5vw 37vw;
+    border-radius: 2vw;
+}
+
+h1.title {
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+p.t_trans {
+    font-size: 1vw;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
+
+input {
+    margin: 1vw 2vw;
+    background-color: #e9e6e6;
+    border: none;
+    border-bottom: 0.1vw solid #000000;
+    padding: 0.7vw 1vw;
+    padding-right: 5vw;
+    
+}
+input:focus {
+    outline: none;
+    border-bottom: 0.2vw dashed #87A922;
+}
+input:hover {
+    background-color: #f0eeee;
+}
+
+button {
+    background-color: #87A922;
+    font-size: 1vw;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    margin: 2vw auto;
+    padding: 0.7vw 1.6vw;
+}
+button:hover {
+    background-color: #7b9a1f;
+}
+
+a {
+    color: #B5B5B5;
+    font-size: 0.8vw;
+    text-decoration: none;
+}
+a>span {
+    font-weight: 700;
+}
+a:hover {
+    color: #929292;
+}

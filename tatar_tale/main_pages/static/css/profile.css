@@ -235,6 +235,7 @@ div.profile_block>div.profile_info {
 }
 
 .change_username_form{
+    position: absolute;
     transition: 0.5s ease-out;
 }
 .change_username_form input{
@@ -263,4 +264,16 @@ div.profile_block>div.profile_info {
 }
 .change_username_form button:hover{
     background-color: #74911f;
+}
+
+.logout_link{
+    position: absolute;
+    margin-left: 130vh;
+    margin-top: -10vh;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease-in;
+}
+.logout_link:hover{
+    color: gray;
 }

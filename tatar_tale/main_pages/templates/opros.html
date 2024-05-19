@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/opros.css' %}">
+    <title>{{ title }}</title>
+    <style>
+        .result_none {
+            display: none;
+        }
+        .result_block {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 class="title">Пройдите тест на определение уровня татарского языка</h1>
+        <div class="quiz_block">
+            <div class="question">
+                <h1>1. Хәлләрегез  ____________?</h1>
+                <label>
+                    <input type="radio" name="q1" value="кая">
+                    <p>кая</p>
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="кайда">
+                    <p>кайда</p>
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="ничек">
+                    <p>ничек</p>
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="ничәнче">
+                    <p>ничәнче</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>2. Син ____ эшлисең?</h1>
+                <label>
+                    <input type="radio" name="q2" value="кничә">
+                    <p>кничә</p>
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="кайда">
+                    <p>кайда</p>
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="немне">
+                    <p>немне</p>
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="кайдан">
+                    <p>кайдан</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>3. Бу ____? Бу – Азат.</h1>
+                <label>
+                    <input type="radio" name="q3" value="ничек">
+                    <p>ничек</p>
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="кем">
+                    <p>кем</p>
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="нәрсә">
+                    <p>нәрсә</p>
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="кайда">
+                    <p>кайда</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>4. Дүшәмбе, җомга, якшәмбе  – ___________.</h1>
+                <label>
+                    <input type="radio" name="q4" value="атна көннәре">
+                    <p>атна көннәре</p>
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="ел фасыллары">
+                    <p>ел фасыллары</p>
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="һөнәрләр">
+                    <p>һөнәрләр</p>
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="ай исемнәре">
+                    <p>ай исемнәре</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>5. Казан, Алабуга, Әлмәт –  ____________ .</h1>
+                <label>
+                    <input type="radio" name="q5" value="елгалар">
+                    <p>елгалар</p>
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="шәһәрләр">
+                    <p>шәһәрләр</p>
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="илләр">
+                    <p>илләр</p>
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="авыллар">
+                    <p>авыллар</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>6. Бу – Зөлфия ханым. ____ Әлмәттән.</h1>
+                <label>
+                    <input type="radio" name="q6" value="Сез">
+                    <p>Сез</p>
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="Ул">
+                    <p>Ул</p>
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="Аның">
+                    <p>Аның</p>
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="Алар">
+                    <p>Алар</p>
+                </label>
+            </div>
+            <div class="question">
+                <h1>7. Дамир _____ Динар – хезмәттәшләр.</h1>
+                <label>
+                    <input type="radio" name="q7" value="һәм">
+                    <p>һәм</p>
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="ә">
+                    <p>ә</p>
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="ләкин">
+                    <p>ләкин</p>
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="дә">
+                    <p>дә</p>
+                </label>
+            </div>
+            <div class="result_block" id="result_block">
+                <div class="message">
+                    <ul class="messages">
+                        <p id="result"></p>
+                    </ul>
+                    <div class="close_message">
+                        <a href="{% url 'tails_select' %}">Далее</a>
+                    </div>
+                </div>
+            </div>
+            <button id="button_success" style="margin-left: 90vh;" onclick="checkAnswers()">Проверить</button>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "ничек",
+            q2: "кайда",
+            q3: "кем",
+            q4: "атна көннәре",
+            q5: "шәһәрләр",
+            q6: "Ул",
+            q7: "һәм"
+        };
+
+        let score = 0;
+        let totalQuestions = 7;
+        let answeredQuestions = 0;
+
+        for (let question in answers) {
+            const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+            if (userAnswer) {
+                answeredQuestions++;
+                if (userAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+        }
+
+        const resultDiv = document.getElementById('result');
+        if (answeredQuestions < totalQuestions) {
+            alert("Пожалуйста, выберите все варианты.");
+        } else {
+            resultDiv.innerHTML = `Ваш результат: ${score} из ${totalQuestions}`;
+            const resultBlock = document.getElementById('result_block');
+            resultBlock.style.display = 'flex';
+
+            $(document).ready(function() {
+                var formData = new FormData();
+                formData.append('avatar', this.files[0]);
+    
+                $.ajax({
+                    url: '{% url "save_opros" %}',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            location.reload();
+                        } else {
+                            alert(response.error);
+                        }
+                    },
+                    error: function(response) {
+                        alert('An error occurred while uploading the file.');
+                    }
+                });
+                
+            });
+        }
+    }
+</script>
+

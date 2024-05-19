@@ -10,8 +10,8 @@ class AllInfoTales(models.Model):
 
 class TalesInfo(models.Model):
     all_info_tales = models.ForeignKey(AllInfoTales, on_delete=models.CASCADE)
-    percent_progress = models.IntegerField()
-
+    percent_progress = models.IntegerField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
 class LearnedWords(models.Model):
     words = models.CharField(max_length=30)

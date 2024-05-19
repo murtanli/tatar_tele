@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url('../images/background_img.png');
+    background-size: content;
+    display: flex;
+    z-index: 0;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    overflow-x: hidden;
+}
+
+h1.title {
+    margin: 3vw auto;
+    color: #ffffff;
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 2vw;
+    margin: 2.5vw 30vw;
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 2vw;
+    font-size: 1.5vw;
+}
+
+input[type=radio] {
+    width: 1.5vw;
+    height: 1.1vw;
+    margin-left: 3vw;
+}
+
+.question > h1 {
+    font-size: 1.4vw;
+    margin: 1vw 2vw;
+    width: 90%;
+    text-align: start;
+}
+
+p {
+    margin: 0.2vw 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+    color: #ff0000;
+}
+
+button {
+    font-size: 1.4vw;
+    background-color: #87A922;
+    border: solid 0.1vh black;
+    padding: 1vw 4vw;
+    margin-bottom: 3vw;
+    margin-top: 0;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+.message_block_none {
+    display: none;
+}
+
+.message_block {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_message a {
+    font-family: "Jost", sans-serif;
+    font-size: 1.2vw;
+    width: 25vh;
+    height: 6vh;
+    color: white;
+    border: none;
+    background-color: #87A922;
+    transition: 0.4s ease;
+    border-radius: 2vh;
+    font-size: 1.4vw;
+    background-color: #87A922;
+    border: solid 0.1vh black;
+    padding: 1vw 4vw;
+    margin-bottom: 3vw;
+    margin-top: 0;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+.close_message a:hover {
+    background-color: rgb(182, 6, 27);
+}
+
+.close_message {
+    margin-bottom: 10vh;
+}
+
+.message {
+    display: flex;
+    width: 50vh;
+    background-color: white;
+    border-radius: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 0.1vh black;
+}
+
+.messages {
+    padding: 5vh;
+}
+
+.messages li {
+    font-family: "Jost", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: red;
+}
+
+.result_none {
+    display: none;
+}
+
+.result_block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.result_block_text {
+    background-color: white;
+    border-radius: 2vh;
+    padding: 2vh;
+    text-align: center;
+}
+
+.block_pop {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+#result{
+    font-family: "Jost", sans-serif;
+    font-size: 1.2vw;
+}

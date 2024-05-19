@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'cssfooter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="btn_container_left">
+            <a href="#">О нас</a>
+        </div>
+        <div class="btn_container_right">
+            <a href="{% url 'main' %}">Главная страница</a>
+        </div>
+    </header>
+    <main>
+        {% if messages %}
+            <div class="message_block_none">
+                <div class="message">
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="close_message">
+                        <button onclick="closeMessageBlock()">закрыть</button>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <form class="reg_block" method="post" action="{% url 'sign_in' %}"  onsubmit="return validateForm(this)">
+            {% csrf_token %}
+            <h1 class="title">Сәлам минем дустым</h1>
+            <p class="t_trans">Привет дорогой друг</p>
+            <input type="text" name="login" placeholder="Имя пользователя">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="password" placeholder="Пароль">
+            <input type="password" name="p_repeat" placeholder="Повторите пароль">
+            <button type="submit">Зарегестрироваться</button>
+            <a href="{% url 'auth' %}">Есть аккаунт ? <span>Авторизироваться</span></a>
+        </form>
+    </main>
+   
+</body>
+</html>
+<script>
+    function validateForm(form) {
+        var login = form.querySelector('input[name="login"]');
+        var password = form.querySelector('input[name="password"]');
+        var repeatPassword = form.querySelector('input[name="repeat_password"]');
+
+        if (login.value.trim() === '' || password.value.trim() === '') {
+            alert('Поля не должны быть пустыми!');
+            return false;
+        }
+
+        if (form.id === 'block_sign_in') {
+            if (password.value !== repeatPassword.value) {
+                alert('Пароли не совпадают!');
+                return false;
+            }else if(password.value.length < 8) {
+                alert('Пароль должен иметь больше 8 символов !');
+                return false;
+            } 
+
+        }
+
+        console.log('Логин: ' + login.value);
+        console.log('Пароль: ' + password.value);
+
+        
+        return true;
+    }
+    function closeMessageBlock() {
+        var mesBlock = document.querySelector('.message_block');
+        mesBlock.classList.remove('message_block');
+        mesBlock.classList.add('message_block_none');
+    }
+</script>
