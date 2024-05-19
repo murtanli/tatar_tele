@@ -185,3 +185,15 @@ def logout(request):
 def save_opros(request):
     if request.method == 'POST':
         pass
+
+def map_lesson(request, tale_id):
+    tale = get_object_or_404(AllInfoTales, pk=tale_id)
+    user = request.user
+    profile = Profile.objects.get(user_id=user.id)
+    return render(request, 'lesson_trail.html', context={'tale': tale, 'profile': profile})
+
+def lesson_tale(request, lesson_id):
+    lesson = AllLessons.objects.get(pk=lesson_id)
+    user = request.user
+    profile = Profile.objects.get(user_id=user.id)
+    return render(request, 'block_lesson.html', context={'lesson': lesson, 'profile': profile})

@@ -1,50 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/blocks/header.css">
-    <link rel="stylesheet" href="../css/blocks/footer.css">
-    <link rel="stylesheet" href="../css/lesson_trail.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/lesson_trail.css' %}">
+    <title>{{ title }}</title>
 </head>
-<body>
-    <header>
-        <div class="btn_container_left">
-            <a href="#">О нас</a>
-            <a href="#">Сказки</a>
+    <div class="title_box">
+        <img src="{% static 'images/tale_1_img.png' %}" alt="tale_img" class="tale_img">
+        <div class="stats_grid">
+            <h1 class="title">{{ tale.name_tales }}</h1>
+            <div class="progress_bar"></div>
+            <h1 class="chapter">Глава 1</h1>
+            <p class="part">Малай нашел шурале</p>
         </div>
-        <div class="central_accaunt">
-            <div class="account_progress">
-                <a href="profile"><img src="" alt="profile_img"></a>
-            </div>
+    </div>
+    <div class="quest_mapcontainer">
+        <div class="map_layout">
+            <div class="lesson_done first"><a href="{% url 'lesson_tale' 2 %}">a</a></div>
+            <div class="lesson_done second"><a href="{% url 'lesson_tale' 2 %}">a</a></div>
+            <div class="lesson third"><a href="#">a</a></div>
+            <div class="lesson fourth"><a href="#">a</a></div>
         </div>
-        <div class="btn_container_right">
-            <a href="#">Обучение</a>
-            <a href="#">Контакты</a>
-        </div>
-    </header>
-    <main>
-        <div class="title_box">
-            <img src="../pictures/lesson_trail/tale_img.png" alt="tale_img" class="tale_img">
-            <div class="stats_grid">
-                <h1 class="title">Шурале</h1>
-                <div class="progress_bar"></div>
-                <h1 class="chapter">Глава 1</h1>
-                <p class="part">Малай нашел шурале</p>
-            </div>
-        </div>
-        <div class="quest_mapcontainer">
-            <div class="map_layout">
-                <div class="lesson_done first"><a href="#">a</a></div>
-                <div class="lesson_done second"><a href="#">a</a></div>
-                <div class="lesson third"><a href="#">a</a></div>
-                <div class="lesson fourth"><a href="#">a</a></div>
-            </div>
-        </div>
-    </main>
-    <footer>
-
-    </footer>
-</body>
-</html>
+    </div>
+{% endblock %}

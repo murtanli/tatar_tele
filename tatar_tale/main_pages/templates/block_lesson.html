@@ -1,0 +1,30 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/block_lesson.css' %}">
+    <title>{{ title }}</title>
+</head>
+<div class="lesson_block">
+    <div class="top">
+        <svg class="arrow_back" width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 2L3 12.5352L19 24" stroke="#2F2E3F" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        <h1>Шурале</h1>
+        <div class="progress_bar"></div>
+    </div>
+    <div class="lesson">
+        <img src="{% static 'images/lesson_img.png' %}" alt="lesson_img">
+        <div class="content_text">
+            <h2>Кул___, аяк___, борын барысы да Шүрәледә коточкыч</h2>
+            <div class="btns">
+                <button>лар</button>
+                <button>ләр</button>
+                <button>нар</button>
+                <button>нәр</button>
+            </div>
+            <button class="next">Далее</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -13,4 +13,6 @@ urlpatterns = [
     path('oprosnik/', oprosnik, name='oprosnik'),
     path('logout/', logout, name='logout'),
     path('save_opros/', save_opros, name='save_opros'),
+    path('lesson_map/<int:tale_id>/', map_lesson, name='map_lesson'),
+    path('lesson/<int:lesson_id>/', lesson_tale, name='lesson_tale'),
 ]
